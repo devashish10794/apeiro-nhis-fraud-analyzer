@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: fraud
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://dpg-d4242hqli9vc738200ag-a.oregon-postgres.render.com:5432/nhis_fraud}
+    username: ${DATABASE_USERNAME:nhis_admin}
+    password: ${DATABASE_PASSWORD:CnMlT8k0S480rXzm9XonQUxtMu5bevnb}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 26MB
+
+server:
+  port: ${PORT:8080}
+
+
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
+    operations-sorter: alpha
+    tags-sorter: alpha
+    display-request-duration: true
+  packages-to-scan: com.nhis.fraud
+  paths-to-match: /api/**
