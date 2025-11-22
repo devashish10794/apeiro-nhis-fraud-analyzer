@@ -6,7 +6,7 @@ The NHIS (National Health Insurance Scheme) Fraud Analyzer is a comprehensive fu
 
 ## Project Information
 
-- **Project Name**: NHIS Fraud Auditor Dashboard
+- **Project Name**: APEIRTO NHIS Fraud ANALYZER
 - **Version**: 0.0.1-SNAPSHOT
 - **Organization**: com.nhis
 - **Architecture**: Microservices-style monolith with separate frontend and backend
